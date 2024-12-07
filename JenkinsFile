@@ -1,53 +1,40 @@
-pipeline
-{
+//declarative style
+
+pipeline {
     agent any
-    parameters
-    {
-        string(name:'SPEC', defaultValue: "cypress/e2e/**/**", description: "Enter the script path that yoou want to execute");
-        choice(name:'BROWSER', choices:['chrome','edge','firefox'], description: "Choice the browser where you want to execute your script");
+
+    options {
+        ansiColor('xterm') // Enable colored console output
     }
 
-    options
-    {
-        ansiColor('xterm')
-    }
-
-    stages
-    {
-        stage('Building')
-        {
-            echo "Building the application"
-        }
-        stage('Testing')
-        {
-            steps
-            {
-                bat "npn i"
-                bat "npx cypress run --browser ${BROWSER} --spec${SPEC}"
-
+    stages {
+        stage('Building') {
+            steps {
+                echo 'Building the project...'
+                // Install dependencies (Windows command)
+                bat 'npm install'
             }
-
         }
-        stage('Deploying')
-        {
-            echo "Deploy the Application"
-
+        stage('Testing') {
+            steps {
+                echo 'Running Cypress tests...'
+                // Run Cypress tests (Windows command)
+                bat 'npx cypress run'
+            }
         }
-
+        stage('Deploying') {
+            steps {
+                echo 'Deploying the project...'
+                // Add deployment commands for Windows here
+                bat 'echo Deploy step - Add your commands here'
+            }
+        }
     }
 
-    post
-    {
-        always
-        {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reprtName: 'HTML Report', reportTitles:''])
-
+    post {
+        always {
+            echo 'Cleaning up workspace...'
+            cleanWs() // Clean the workspace after the pipeline
         }
-
     }
-
-
-
-
-
 }
