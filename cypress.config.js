@@ -7,6 +7,7 @@ module.exports = defineConfig(
   e2e: {
     setupNodeEvents(on, config) 
     {
+      specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
 
       require('cypress-mochawesome-reporter/plugin')(on);// HTML REPORT !!!
       // implement node event listeners here
