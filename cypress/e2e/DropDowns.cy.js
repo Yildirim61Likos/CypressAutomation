@@ -48,6 +48,7 @@ it('dropDown without Select ' , () =>
               // Auto suggestion dropdown
 
                 cy.xpath("//textarea[@aria-label='Search']").type("cypress automation");
+                
 
 
                 cy.wait(3000);
