@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test1": "node_modules\\.bin\\cypress run",
-    "headTest": "npm run test -- --headed",
-    "chromeTest": "npm run test -- --browser chrome",
-    "specificFileTest": "npx cypress run --spec \"cypress/e2e/XPATHLocator.cy.js\"",
+    "test": "echo 'Error: no test specified' && exit 1",
+    "testAllLocal": "node_modules\\.bin\\cypress run",
+    "TestRunGlobal": "npx cypress run",
+    "headTest": "npm run TestRunGlobal -- --headed", 
+    "chromeTest": "npm run TestRunGlobal -- --browser chrome",
+    "specificFileTest": "npx cypress run --spec 'cypress/e2e/XPATHLocator.cy.js' --browser chrome --headless",
     "cypress:open": "cypress open",
     "cypress:run": "npm run prereport && cypress run"
 
