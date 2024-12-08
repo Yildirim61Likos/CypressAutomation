@@ -8,7 +8,7 @@
     "test1": "node_modules\\.bin\\cypress run",
     "headTest": "npm run test -- --headed",
     "chromeTest": "npm run test -- --browser chrome",
-    "specificFileTest": "npm run test -- --spec \"cypress/e2e/**/*.cy.js/*\""
+    "specificFileTest": "npx cypress run --spec \"cypress/e2e/XPATHLocator.cy.js\""
 
   },
   "author": "Yildirim Likos",
