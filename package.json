@@ -9,7 +9,7 @@
     "TestRunGlobal": "npx cypress run",
     "headTest": "npm run TestRunGlobal -- --headed", 
     "chromeTest": "npm run TestRunGlobal -- --browser chrome",
-    "specificFileTest": "npx cypress run --spec 'cypress/e2e/XPATHLocator.cy.js' --browser chrome --headless",
+    "specificFileTest": "npx cypress run --spec 'cypress/e2e/XPATHLocator.cy.js' --browser chrome --headless"
     
 
   },
