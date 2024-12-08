@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1",
     "testAllLocal": "node_modules\\.bin\\cypress run",
-    "TestRunGlobal": "npx cypress run",
+    "TestRunGlobal": "npx cypress run --browser chrome --headless",
     "headTest": "npm run TestRunGlobal -- --headed", 
     "chromeTest": "npm run TestRunGlobal -- --browser chrome",
     "specificFileTest": "npx cypress run --spec 'cypress/e2e/XPATHLocator.cy.js' --browser chrome --headless"
