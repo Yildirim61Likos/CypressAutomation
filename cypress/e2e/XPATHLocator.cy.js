@@ -4,7 +4,9 @@ describe('XPATHLOACTOR',() =>
 it('xpathlocator test',() =>
 {
 
-    cy.visit("http://www.automationpractice.pl/index.php")
+    const baseUrl = Cypress.env('BASE_URL');
+    cy.log(baseUrl);
+    cy.visit(baseUrl)
 
     cy.xpath("//div[@id='htmlcontent_home']/ul/li").should('have.length','5')
 
@@ -17,7 +19,8 @@ it('chained xpath', () =>
 {
 
 
-    cy.visit("http://www.automationpractice.pl/index.php")
+    const baseUrl = Cypress.env('BASE_URL');
+    cy.visit(baseUrl)
 
     cy.xpath("//div[@id='htmlcontent_home']/ul").xpath("./li").should('have.length','5')
 
