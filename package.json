@@ -10,8 +10,7 @@
     "headTest": "npm run TestRunGlobal -- --headed", 
     "chromeTest": "npm run TestRunGlobal -- --browser chrome",
     "specificFileTest": "npx cypress run --spec 'cypress/e2e/XPATHLocator.cy.js' --browser chrome --headless",
-    "cypress:open": "cypress open",
-    "cypress:run": "npm run prereport && cypress run"
+    
 
   },
   "author": "Yildirim Likos",
