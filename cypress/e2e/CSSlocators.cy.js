@@ -13,6 +13,8 @@ describe('CSSLocators' , () =>
       cy.get("button[type='submit']").click()
 
       cy.title().should('eq','OrangeHRM')
+      cy.get('.product:visiable') // this is only getting visiable products !!!!
+      
 
     } )
 
