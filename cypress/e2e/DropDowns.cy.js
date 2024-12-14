@@ -1,6 +1,6 @@
 describe('DropDown',() => 
 {
-it('dropDown with slect' , () =>
+it('dropDown with select' , () =>
 {
 
     cy.visit("https://www.zoho.com/commerce/free-demo.html");
@@ -60,6 +60,7 @@ it('dropDown without Select ' , () =>
                 {
                   if($el.text()=='cypress automation tutorial')
                       cy.wrap($el).click()
+                      $el.click();
 
                 })
 

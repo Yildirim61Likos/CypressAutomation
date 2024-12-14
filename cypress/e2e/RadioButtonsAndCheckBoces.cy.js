@@ -82,6 +82,8 @@ it('Checking Select all check boxes',() =>
      cy.xpath("//*[@id='Content']/div[1]/blockquote[1]//input").check().should('be.checked');
 
      cy.xpath("//*[@id='Content']/div[1]/blockquote[1]//input").uncheck().should('not.be.checked');
+     cy.xpath("//*[@id='Content']/div[1]/blockquote[1]//input").check(['option2','option3']);
+     
 
 
 
