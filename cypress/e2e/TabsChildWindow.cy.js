@@ -20,6 +20,23 @@ describe('Handle Tab approach 1',() =>
        // operations on child tab 
        
        cy.go('back'); // back to the parent tab !!!
+
+
+
+       //  also child window 
+
+       // if we know hfref attribute then we can move it directly 
+       // and then cy.visit that url 
+       // TO GET THE PROPERTIES 
+
+       cy.get("//h3[normalize-space()='New Window']").then((el)=> // now we have the element !
+      {
+          const url =el.prop('href');
+          cy.visit(url);
+
+
+       })
+
     
     })
 

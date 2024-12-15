@@ -1,5 +1,7 @@
 const { defineConfig } = require("cypress");
 
+
+// we are using mocha framework
 module.exports = defineConfig(
 {
   video: true,

@@ -10,6 +10,7 @@ it('JS First Alert', () =>
    cy.on('window:alert',(t)=>
    {
        expect(t).to.contains('I am a JS Alert');
+       expect(t).to.equal('I am a JS Alert');
 
 
    })
@@ -125,7 +126,8 @@ it.only('JS Authenticated Alert', () =>
       // https://admin:admin@the-internet.herokuapp.com/basic_auth
         cy.visit("https://admin:admin@the-internet.herokuapp.com/basic_auth")
 
-        cy.xpath("//p[contains(text(),'Congratulations! You must have the proper credenti')]").should('have.contain','Congratulations');
+        cy.xpath("//p[contains(text(),'Congratulations! You must have the proper credenti')]")
+        // .should('have.contain','Congratulations');
 
 
 

@@ -54,6 +54,8 @@ it('Approach 2 Custom commands ',() =>
            cy.frameLoaded('#mce_0_ifr'); // ;Load the frame
            cy.iframe("#mce_0_ifr").clear().type("Welcome Yildirim Welcome !!!");
 
+           // another way doing it  cy.iframe().find("[aria-label='Bold']").eq(0).click();
+
            cy.get("[aria-label='Bold']").click();
         
 

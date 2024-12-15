@@ -92,5 +92,20 @@ Cypress.on('uncaught:exception', (err, runnable) => {
    })
   
 
+// SELECT PRODUCT 
+Cypress.Commands.add('SelectProduct',(productName,locator,locator2)=>
+{
+  cy.get(locator).each((el,index,list)=>
+    {
+        if(el.text().includes(productName))
+        {
+            cy.get(locator2).eq(index).click();
+        }
+
+
+     })
+
+
+})
 
 
