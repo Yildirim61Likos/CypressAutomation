@@ -21,7 +21,7 @@ module.exports = defineConfig(
   e2e: {
 
      specPattern: 'cypress/e2e/**/*.{cy.js,cy.jsx,cy.ts,cy.tsx,feature}',
-     stepDefinitions: 'cypress/e2e/**/*.{js,ts}',
+     stepDefinitions: 'cypress/e2e/**/*.js',
      
     setupNodeEvents(on, config) 
     {

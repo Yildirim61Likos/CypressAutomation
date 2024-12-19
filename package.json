@@ -33,7 +33,6 @@
   
   },
   
-  
   "author": "Yildirim Likos",
   
   "license": "ISC",
@@ -69,13 +68,5 @@
   "cypress-xpath": "^2.0.1"
   
   }
-  ,
 
-  "cypress-cucumber-preprocessor": 
-  {
-  
-  "nonGlobalStepDefinitions": true,
-  "step_definitions":"cypress/e2e/**/*.js"
-  
-  }
 }
