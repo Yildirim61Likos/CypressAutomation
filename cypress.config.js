@@ -20,25 +20,25 @@ module.exports = defineConfig(
   
   e2e: {
 
-     specPattern: 'cypress/e2e/**/*.{cy.js,cy.jsx,cy.ts,cy.tsx,feature}',
-     stepDefinitions: 'cypress/e2e/**/*.js',
+     //specPattern: 'cypress/e2e/**/*.{cy.js,cy.jsx,cy.ts,cy.tsx,feature}',
+     specPattern: "cypress/e2e/*.feature",
+     stepDefinitions: 'cypress/e2e/',
      
     setupNodeEvents(on, config) 
     {
-
-     
       on('file:preprocessor', cucumber());
 
-      require('cypress-mochawesome-reporter/plugin')(on);// HTML REPORT !!!
-      // implement node event listeners here
+      //config.env.TAGS = config.env.TAGS || "not @skip";
+      //npx cypress run -e TAGS='@smoke'
 
-      env: 
+      require('cypress-mochawesome-reporter/plugin')(on);// HTML REPORT !!!
+      // implement node event listeners her
+
+    },
+    env: 
       {
         API_URL: 'https://api.example.com' // Another example we can store our env variables here and call it 
         // Cypress.ent('API_URL')
       }
-      
-      
-    },
   },
 });

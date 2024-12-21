@@ -15,6 +15,7 @@ describe('MyTest Suite',()=>
         before('',()=>
         {
             cy.log("**** Launching App ****");
+            cy.reload();
            
 
         })
@@ -23,6 +24,7 @@ describe('MyTest Suite',()=>
         {
 
             cy.log("*** Close App ***");
+            cy.reload();
 
 
         })
